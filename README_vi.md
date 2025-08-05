@@ -83,3 +83,64 @@ Tham gia cộng đồng Discord nếu cần hỗ trợ.
 
 Tóm lại:
 Chỉ cần bạn biết mình muốn lấy gì từ website, ScrapeGraphAI sẽ tự động lấy cho bạn bằng AI, cực kỳ nhanh và tiện!
+
+
+ScrapeGraphAI là thư viện mã nguồn mở, nên việc sử dụng thư viện này để viết code và chạy trên máy tính cá nhân (local) hoàn toàn miễn phí. Tuy nhiên, chi phí thực tế sẽ phụ thuộc vào mô hình AI (LLM) mà bạn sử dụng để “scrape” dữ liệu, và bạn có thể sẽ phát sinh chi phí trong các trường hợp sau:
+
+1. Chạy Local: MIỄN PHÍ (gần như 100%)
+Nếu bạn dùng model AI chạy trên máy của bạn, ví dụ như sử dụng Ollama hoặc các mô hình open-source (Llama, Mistral, Gemma, v.v...):
+
+ScrapeGraphAI: Miễn phí (không thu phí bản quyền)
+
+Ollama và các model open-source: Miễn phí
+
+Chi phí duy nhất: Máy tính bạn phải đủ mạnh (CPU/RAM/Ổ cứng, hoặc có GPU càng tốt)
+
+Không tốn phí API, không cần nạp tiền
+
+2. Dùng API có tính phí (như OpenAI, Gemini, Azure, Groq, v.v)
+Nếu bạn cấu hình ScrapeGraphAI để sử dụng API của các nhà cung cấp mô hình AI thương mại (ví dụ: ChatGPT của OpenAI):
+
+ScrapeGraphAI: Miễn phí
+
+Chi phí phát sinh: Trả tiền cho API theo mức tiêu thụ token/ký tự (giống như trả tiền cho ChatGPT hoặc Gemini API)
+
+Ví dụ chi phí (tham khảo tháng 8/2025):
+
+OpenAI GPT-4o: ~5 USD/triệu token đầu vào, ~15 USD/triệu token đầu ra.
+
+Gemini Pro: Khoảng 0.5 - 1 USD/triệu token (cập nhật theo Google Cloud).
+
+Groq: Mức giá riêng từng model, thường rẻ hơn OpenAI.
+
+Cách tính chi phí:
+
+Mỗi lần ScrapeGraphAI chạy sẽ gửi prompt + văn bản cần đọc lên server AI → bị tính token (số lượng ký tự).
+
+Nếu bạn scrape nhiều trang web lớn, hoặc scrape nhiều lần, chi phí có thể tăng nhanh.
+
+Nếu chỉ chạy thử hoặc lấy dữ liệu nhỏ, hầu như không tốn nhiều tiền.
+
+3. Dùng dịch vụ SaaS ScrapeGraphAI.com
+Nếu bạn đăng ký sử dụng trực tiếp trên website ScrapeGraphAI.com (không phải chạy trên máy cá nhân), họ có thể thu phí theo gói/tháng hoặc theo lượt sử dụng API.
+
+Giá chi tiết cần tham khảo trực tiếp trên ScrapeGraphAI.com/pricing (tùy thời điểm có miễn phí thử nghiệm hoặc không).
+
+4. Một số chi phí phụ khác (nếu có):
+Hạ tầng cloud: Nếu bạn chạy trên server, có thể tốn thêm phí máy chủ, lưu trữ,...
+
+Dịch vụ tích hợp (Zapier, Bubble...): Có thể mất phí riêng tùy theo gói nền tảng bạn sử dụng.
+
+Tóm tắt bảng chi phí
+Loại sử dụng	Phí ScrapeGraphAI	Phí AI Model	Các phí khác
+Chạy local (Ollama, v.v)	Miễn phí	Miễn phí	Máy tính cá nhân
+API OpenAI, Gemini,...	Miễn phí	Tính phí theo API	Không
+SaaS (ScrapeGraphAI.com)	Theo gói/usage	Đã gồm trong giá	Không
+Tích hợp nền tảng khác	Theo gói riêng	Theo từng platform	Có thể có
+
+Lời khuyên cho người mới:
+Nếu chỉ muốn học hoặc thử nghiệm:
+➡️ Chạy local với model open-source hoàn toàn không tốn phí.
+
+Nếu cần chất lượng cao nhất hoặc tốc độ nhanh:
+➡️ Sử dụng API của OpenAI, Groq, Gemini, nhưng chú ý kiểm soát số lần gọi API để tránh phát sinh chi phí lớn.
